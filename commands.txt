@@ -1,0 +1,12 @@
+# GIT
+git init
+git remote add origin git@github.com:thbdias/OneBitForms_client.git
+git add .
+git commit -m "primeiro commit" 
+git push -u origin master
+
+# DOCKER
+docker pull alexsuch/angular-cli
+docker run -it --rm -w /app -v $(pwd):/app alexsuch/angular-cli ng new onebitforms-client
+
+docker-compose build
