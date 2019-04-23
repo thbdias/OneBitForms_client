@@ -8,5 +8,15 @@ git push -u origin master
 # DOCKER
 docker pull alexsuch/angular-cli
 docker run -it --rm -w /app -v $(pwd):/app alexsuch/angular-cli ng new onebitforms-client
-
 docker-compose build
+docker-compose up
+
+docker-compose run --rm website npm install --save ng2-materialize@1.6.0
+docker-compose run --rm website npm install --save mdi@2.0.46
+docker-compose run --rm website npm install --save @angular/animations
+docker-compose run --rm website npm install --save ngx-color-picker@4.5.0
+docker-compose run --rm website npm install --save ng2-charts@1.6.0
+docker-compose run --rm website npm install --save chart.js@2.7.1           -> ajuda a gerar gráficos
+
+docker-compose run --rm website npm install --save jquery 
+docker-compose run --rm website npm install --save rxjs-compat 
