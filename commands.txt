@@ -17,6 +17,35 @@ docker-compose run --rm website npm install --save @angular/animations
 docker-compose run --rm website npm install --save ngx-color-picker@4.5.0
 docker-compose run --rm website npm install --save ng2-charts@1.6.0
 docker-compose run --rm website npm install --save chart.js@2.7.1           -> ajuda a gerar gráficos
-
 docker-compose run --rm website npm install --save jquery 
 docker-compose run --rm website npm install --save rxjs-compat 
+        Home Component
+docker-compose run --rm website ng g component home
+        Module Forms
+docker-compose run --rm website ng g module forms
+            component Form List
+docker-compose run --rm website ng g component forms/form-list
+            component Form Edit
+docker-compose run --rm website ng g component forms/form-edit
+            component Active
+mkdir src/app/forms/shared            
+docker-compose run --rm website ng g component forms/shared/active
+        Module Answers
+docker-compose run --rm website ng g module answers
+            component Answer List
+docker-compose run --rm website ng g component answers/answer-list
+            component Answer New
+docker-compose run --rm website ng g component answers/answer-new
+            component Graph Number 	
+mkdir src/app/answers/shared            
+docker-compose run --rm website ng g component answers/shared/graph-number
+            component Graph Text
+docker-compose run --rm website ng g component answers/shared/graph-text
+            component Graph Boolean
+docker-compose run --rm website ng g component answers/shared/graph-boolean
+            component Individual Details             
+docker-compose run --rm website ng g component answers/shared/individual-details
+        component Header
+docker-compose run --rm website ng g component header
+        component Not Found        
+docker-compose run --rm website ng g component not-found
