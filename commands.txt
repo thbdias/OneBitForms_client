@@ -19,6 +19,7 @@ docker-compose run --rm website npm install --save ng2-charts@1.6.0
 docker-compose run --rm website npm install --save chart.js@2.7.1           -> ajuda a gerar gráficos
 docker-compose run --rm website npm install --save jquery 
 docker-compose run --rm website npm install --save rxjs-compat 
+
         Home Component
 docker-compose run --rm website ng g component home
         Module Forms
@@ -49,3 +50,25 @@ docker-compose run --rm website ng g component answers/shared/individual-details
 docker-compose run --rm website ng g component header
         component Not Found        
 docker-compose run --rm website ng g component not-found
+
+        Models -> interface entre o app e a estrutura de dados; em vez de agir sobre o json, agir sobre objetos  	
+mkdir src/app/shared
+        model Form
+touch src/app/shared/form.model.ts
+        model Question
+touch src/app/shared/question.model.ts
+        model Answers
+touch src/app/shared/answer.model.ts
+        model Questions Answers
+touch src/app/shared/questions_answer.model.ts
+
+        Providers (Services) -> consumir dados de api; arquivo faz chamada REST
+        service Forms
+docker-compose run --rm website ng g service shared/form
+        service Questions
+docker-compose run --rm website ng g service shared/question
+        service Answers
+docker-compose run --rm website ng g service shared/answer
+
+
+
