@@ -71,4 +71,7 @@ docker-compose run --rm website ng g service shared/question
 docker-compose run --rm website ng g service shared/answer
 
 
+        Rotas
+touch src/app/app.routing.ts        
+
 
