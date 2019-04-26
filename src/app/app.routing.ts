@@ -16,7 +16,7 @@ import { AnswersModule } from './answers/answers.module';
       // path: '**' -> quando não encontrar a url, redirecione para a url 'not-found'      
 const appRoutes: Routes = [
     { path: '', pathMatch: 'full', component: HomeComponent },
-    { path: 'not-found', component: NotFoundComponent },
+    { path: 'not-found', component: NotFoundComponent },    
     { path: '**', redirectTo: 'not-found' }
 ];
  
